@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation site | Contact</title>
+    <link rel="stylesheet" href="product.css">
+    <style>
+        .contact-wrap {
+            width: min(1000px, calc(100% - 40px));
+            margin: 0 auto 80px;
+        }
+
+        .contact-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 28px;
+            padding: 32px 28px;
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.28);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 18px 20px;
+            border-radius: 14px;
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            background: rgba(15, 23, 42, 0.8);
+            color: #f8fafc;
+            font: inherit;
+            font-size: 1.02rem;
+        }
+
+        .contact-form textarea {
+            min-height: 190px;
+            resize: vertical;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading" aria-live="polite" aria-label="Loading page">
+        <div class="loader-shell">
+            <div class="loader-ring"></div>
+            <div class="loader-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <p class="loader-label">Loading contact page...</p>
+        </div>
+    </div>
+
+    <nav>
+        <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="background">
+            <div class="an-backg"></div>
+        </div>
+        <header class="head-page">
+            <h1>Contact us</h1>
+        </header>
+        <h2>We’d love to hear from you</h2>
+    </section>
+
+    <section class="contact-wrap">
+        <article class="contact-card">
+            <form class="contact-form">
+                <input type="text" placeholder="Your name" aria-label="Your name">
+                <input type="email" placeholder="Your email" aria-label="Your email">
+                <input type="text" placeholder="Subject" aria-label="Subject">
+                <textarea placeholder="Tell us how we can help..." aria-label="Your message"></textarea>
+                <button type="submit" class="buy">Send message</button>
+            </form>
+        </article>
+    </section>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+            const loader = document.getElementById('loading');
+            setTimeout(() => {
+                if (loader) loader.style.display = 'none';
+            }, 350);
+        });
+    </script>
+</body>
+</html>

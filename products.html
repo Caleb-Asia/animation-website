@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation site</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <div id="loading" aria-live="polite" aria-label="Loading page">
+        <div class="loader-shell">
+            <div class="loader-ring"></div>
+            <div class="loader-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <p class="loader-label">Loading products...</p>
+        </div>
+    </div>
+
+    <nav>
+        <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
+    <section id="home">
+        <div class="background">
+            <div class="an-backg"></div>
+        </div>
+    <header class="head-page"><h1>Welcome to our product display page</h1></header>
+     <h2>Products available</h2>
+    </section>
+    <br>
+<section id ="products">
+        <div class="product-card">
+            <img src="https://www.incredible.co.za/api/catalog/product/1/0/10261750_ecommerce_1ff2.png?width=808&height=538&store=incredibleconnection&image-type=image" alt="Product 1">
+            <h3>PS5</h3>
+            <p>PS5 slim digital console with 825GB SSD and wireless controller</p>
+           <div class = "overlay">
+            <span class="price">R999.00</span>
+             <button class="buy">Add to Cart</button>
+             
+           </div>
+        </div>
+        <div class="product-card">
+            <img src="https://catalog.sixty60.co.za/v2/files/69e7f5ccdc13c4068f3f7555?width=320&height=320" alt="Product 2">
+            <h3>Nintendo Switch</h3>
+            <p>Nintendo Switch OLED console with 64GB SSD and 7 inch display</p>
+           <div class = "overlay">
+            <span class="price">R499.00</span>
+            <br>
+             <button class="buy">Add to Cart</button>
+             
+           </div>
+        </div>
+        <div class="product-card">
+            <img src="https://www.incredible.co.za/api/catalog/product/x/b/xboxseriesx_cnslcntlr_anl_rgb_e_commerce_f63b.jpg?width=808&height=538&store=incredibleconnection&image-type=image" alt="Product 3">
+            <h3>Xbox Series X</h3>
+            <p>Xbox Series X console with 1TB SSD and 4K HDR gaming</p>
+            <div class = "overlay">
+            <span class="price">R99.00</span>   
+             <button class="buy">Add to Cart</button>
+           </div>
+        </div>
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/51r9QEJGoML._AC_SX450_.jpg" alt="Product 4">
+            <h3>PS5 DualSense Charge Station</h3>
+            <p>Charge your PS5 DualSense controllers with this convenient charge station.</p>
+            <div class = "overlay">
+            <span class="price">R49.99</span>
+             <button class="buy">Add to Cart</button>
+           </div>
+        </div>
+        <div class="product-card">
+            <img src="https://lego-gybc.co.za/cdn/shop/files/lego-iconic-fifa-world-cup-official-trophy-43020_001_prod.jpg?v=1764776427&width=900" alt="Product 5">
+            <h3>Lego FIFA World Cup Trophy</h3>
+            <p>Discover the excitement of the FIFA World Cup with this iconic LEGO trophy.</p>
+            <div class = "overlay">
+            <span class="price">R199.99</span>
+             <button class="buy">Add to Cart</button>
+           </div>
+        </div>  
+        <div class="product-card">
+            <img src="https://img.kwcdn.com/thumbnail/s/0d9f8d8595002185935cd1635089f359_51ee86b6b87b.jpeg?imageView2/2/w/264/q/70/format/avif" alt="Product 6">
+            <h3> Stylish Suit</h3>
+            <p>Stay stylish and comfortable with this elegant suit for any occasion.</p>
+            <div class = "overlay">
+             <span class="price">R3 999.99</span>
+             <button class="buy">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+            const loader = document.getElementById('loading');
+            setTimeout(() => {
+                if (loader) loader.style.display = 'none';
+            }, 350);
+        });
+    </script>
+</body>
+</html>

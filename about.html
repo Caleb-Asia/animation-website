@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation site | About</title>
+    <link rel="stylesheet" href="product.css">
+    <style>
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            width: min(1100px, calc(100% - 40px));
+            margin: 0 auto 80px;
+        }
+
+        .info-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 24px;
+            padding: 28px 22px;
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.28);
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading" aria-live="polite" aria-label="Loading page">
+        <div class="loader-shell">
+            <div class="loader-ring"></div>
+            <div class="loader-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <p class="loader-label">Loading about page...</p>
+        </div>
+    </div>
+
+    <nav>
+        <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="background">
+            <div class="an-backg"></div>
+        </div>
+        <header class="head-page">
+            <h1>About our brand</h1>
+        </header>
+        <h2>Built on quality, trust, and thoughtful design</h2>
+    </section>
+
+    <section class="info-grid">
+        <article class="info-card">
+            <h3>Our story</h3>
+            <p>We started with a simple idea: people deserve quality products that feel premium, useful, and easy to enjoy every day.</p>
+        </article>
+
+        <article class="info-card">
+            <h3>Our mission</h3>
+            <p>To bring together standout technology, useful accessories, and modern lifestyle products that make everyday life smoother.</p>
+        </article>
+
+        <article class="info-card">
+            <h3>Our values</h3>
+            <p>We care about honest pricing, dependable products, and a customer experience that feels personal from the first click onward.</p>
+        </article>
+    </section>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+            const loader = document.getElementById('loading');
+            setTimeout(() => {
+                if (loader) loader.style.display = 'none';
+            }, 350);
+        });
+    </script>
+</body>
+</html>

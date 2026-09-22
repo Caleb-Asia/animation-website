@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation site | Home</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <div id="loading" aria-live="polite" aria-label="Loading page">
+        <div class="loader-shell">
+            <div class="loader-ring"></div>
+            <div class="loader-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <p class="loader-label">Loading homepage...</p>
+        </div>
+    </div>
+
+    <nav>
+        <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="background">
+            <div class="an-backg"></div>
+        </div>
+        <header class="head-page">
+            <h1>Welcome to our digital storefront</h1>
+        </header>
+        <h2>Discover modern essentials for everyday life</h2>
+    </section>
+
+    <section id="products">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80" alt="Gaming collection">
+            <h3>Gaming Essentials</h3>
+            <p>Upgrade your setup with premium tech, immersive entertainment, and performance-ready gear.</p>
+            <div class="overlay">
+                <span class="price">Top Picks</span>
+                <button class="buy" onclick="location.href='products.html'">Shop Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80" alt="Lifestyle products">
+            <h3>Style & Comfort</h3>
+            <p>Thoughtful accessories and standout pieces designed to match your lifestyle with ease.</p>
+            <div class="overlay">
+                <span class="price">New Arrivals</span>
+                <button class="buy" onclick="location.href='products.html'">View Range</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80" alt="Customer experience">
+            <h3>Customer First</h3>
+            <p>We focus on quality, responsive service, and a smooth shopping experience from start to finish.</p>
+            <div class="overlay">
+                <span class="price">Trusted</span>
+                <button class="buy" onclick="location.href='about.html'">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+            const loader = document.getElementById('loading');
+            setTimeout(() => {
+                if (loader) loader.style.display = 'none';
+            }, 350);
+        });
+    </script>
+</body>
+</html>
